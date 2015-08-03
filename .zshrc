@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
+# Set name of the theme to load.vi .zs  
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
@@ -40,8 +40,10 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Perlbrew
-PATH=$PATH:~/perl5/perlbrew/bin
-source ~/perl5/perlbrew/etc/bashrc
+if [ -f ~/perl5/perlbrew/etc/bashrc ]; then 
+  PATH=$PATH:~/perl5/perlbrew/bin
+  source ~/perl5/perlbrew/etc/bashrc
+fi
 
 # My aliases
 alias findstr="find . -type f | xargs grep"
