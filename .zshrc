@@ -38,6 +38,12 @@ plugins=(brew git osx perl ruby rails gem)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# Add sbin for homebrewed packages
+export PATH="/usr/local/sbin:$PATH"
+
+# More completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+plugins=(ag $plugins)
 
 # Perlbrew
 if [ -f ~/perl5/perlbrew/etc/bashrc ]; then 
@@ -46,4 +52,6 @@ if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
 fi
 
 # My aliases
+# sudo fix for aliases
+alias sudo="nocorrect sudo "
 alias findstr="find . -type f | xargs grep"
