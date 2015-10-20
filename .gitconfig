@@ -1,0 +1,6 @@
+[user]
+	email = akrivopolenov@gmail.com
+	name = Artem Krivopolenov
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/akrivopolenov/.gitignore_global
