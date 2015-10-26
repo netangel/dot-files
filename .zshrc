@@ -41,6 +41,13 @@ source $ZSH/oh-my-zsh.sh
 # Add sbin for homebrewed packages
 export PATH="/usr/local/sbin:$PATH"
 
+# I'm using uft-8 terminal
+# It's better to explicitly set this variables, 
+# and not to guess from terminal settings
+# May be I can use ru_RU here
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # More completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 plugins=(ag $plugins)
