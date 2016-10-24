@@ -40,3 +40,11 @@ Thumbs.db
 ########################
 sftp-config.json
 
+# Hidden and temporary files #
+##############################
+.project
+.includepath
+*.sw[pon]
+*~
+.#*
+*#
