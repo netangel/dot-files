@@ -13,6 +13,16 @@ set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 
+" Spell check
+set spell
+set spelllang=en,ru
+
+" StatusLine
+set statusline=%<%f%h%m%r%=format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&encoding}\ %b\ 0x%B\ %l,%c%V\ %P
+set cmdheight=1
+set laststatus=2
+set showcmd
+
 " Movement
 " move vertically by visual line
 nnoremap j gj
@@ -32,7 +42,8 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'ag %s -l --nocolor -g ""']
+let g:ctrlp_use_caching = 1
 
 " Handling plugins
 execute pathogen#infect()
