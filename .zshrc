@@ -58,7 +58,10 @@ if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
+source ~/.ssh_agent
+
 # My aliases
 # sudo fix for aliases
 alias sudo="nocorrect sudo "
 alias findstr="find . -type f | xargs grep"
+
